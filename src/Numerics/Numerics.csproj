@@ -84,6 +84,15 @@
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Copulas\ArchimedeanCopula.cs" />
+    <Compile Include="Copulas\BuilderInterfaces.cs" />
+    <Compile Include="Copulas\ClaytonCopula.cs" />
+    <Compile Include="Copulas\Copula.cs" />
+    <Compile Include="Copulas\CorrelationType.cs" />
+    <Compile Include="Copulas\EllipticalCopula.cs" />
+    <Compile Include="Copulas\GaussianCopula.cs" />
+    <Compile Include="Copulas\GumbelCopula.cs" />
+    <Compile Include="Copulas\tCopula.cs" />
     <Compile Include="Differentiate.cs" />
     <Compile Include="Differentiation\FiniteDifferenceCoefficients.cs" />
     <Compile Include="Differentiation\NumericalDerivative.cs" />
