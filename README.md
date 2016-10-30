@@ -1,3 +1,25 @@
+Math.NET Numerics - Copula Fork
+
+Hi, this a fork of Math.NET Numerics, which includes the creation of random samples via Copulas.
+When finished it is intended to be merged into the main library (cf. http://discuss.mathdotnet.com/t/implement-generation-of-correlated-samples/336). Until then you can see all changes on this fork and use it if you need correlated random number generation right now.
+All additions made on this fork are under the same license as the original library, i.e. the MIT license.
+Currently implemented copulas are
+- **Gaussian Copula**, - creation from Pearson linear, Spearman and Kendall rank correlation possible
+- **t Copula**, - creation from Pearson linear, Spearman and Kendall rank correlation possible
+- **Clayton Copula**, - bivariate, creation currently only from Kendalls Tau
+
+The creation of the copulas is implemented via a step builder pattern. For example one can create a t copula by
+    var tCopula = tCopula.Builder()
+                .SetDFreedom(4.5)
+                .SetCorrelationType(CorrelationType.PearsonLinear)
+                .SetRho(rho)
+                .Build();
+Similarly for archimedean copulas:
+	var claytonCopula = ClaytonCopula.Builder()
+                .SetCorrelationType(RankCorrelationType.KendallRank)
+                .SetRho(corr)
+                .Build();
+	
 Math.NET Numerics
 =================
 
