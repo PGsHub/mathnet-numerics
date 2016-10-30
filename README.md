@@ -9,17 +9,21 @@ Currently implemented copulas are
 - **Clayton Copula**, - bivariate, creation currently only from Kendalls Tau
 
 The creation of the copulas is implemented via a step builder pattern. For example one can create a t copula by
-    var tCopula = tCopula.Builder()
-                .SetDFreedom(4.5)
-                .SetCorrelationType(CorrelationType.PearsonLinear)
-                .SetRho(rho)
-                .Build();
+<pre lang="c#"><code>
+var tCopula = tCopula.Builder()
+            .SetDFreedom(4.5)
+            .SetCorrelationType(CorrelationType.PearsonLinear)
+            .SetRho(rho)
+            .Build();
+</code></pre>
 Similarly for archimedean copulas:
-	var claytonCopula = ClaytonCopula.Builder()
-                .SetCorrelationType(RankCorrelationType.KendallRank)
-                .SetRho(corr)
-                .Build();
-	
+<pre lang="c#"><code>
+var claytonCopula = ClaytonCopula.Builder()
+            .SetCorrelationType(RankCorrelationType.KendallRank)
+            .SetRho(corr)
+            .Build();
+</code></pre>
+
 Math.NET Numerics
 =================
 
